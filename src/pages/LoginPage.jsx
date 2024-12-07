@@ -9,7 +9,6 @@ const LoginPage = () => {
     const handleLogin = async (credentials) => {
         try {
             const response = await login(credentials);
-            alert("Login successful: " + response.token);
             navigate("/home");
         } catch (error) {
             alert("Login failed: " + error.message);

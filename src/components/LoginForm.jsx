@@ -11,21 +11,18 @@ const LoginForm = ({ onLogin }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>Email:</label>
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Enter your email"
-      />
-      <label>Password:</label>
-      <input
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        placeholder="Enter your password"
-      />
-      <button type="submit">Login</button>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Enter your email" />
+      </div>
+      <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Enter your password" />
+      </div>
+      <button type="submit" class="btn btn-primary">Iniciar sesión</button>
     </form>
   );
 };
